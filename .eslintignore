@@ -1,0 +1,17 @@
+# Testing
+/coverage
+coverage
+
+# Dependencies
+/node_modules
+/yarn.lock
+/package-lock.json
+/.pnp
+.pnp.js
+
+# Next.js
+/.next/
+/out/
+
+# Production
+/build
