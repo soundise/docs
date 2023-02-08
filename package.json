@@ -1,7 +1,29 @@
 {
   "name": "docs.soundise.com",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
+  "license": "GPL-3.0-only",
+  "description": "Soundise documentation",
+  "homepage": "https://docs.soundise.com",
+  "author": {
+    "name": "Soundise",
+    "email": "soundise@soundise.com"
+  },
+  "bugs": {
+    "url": "https://github.com/soundise/docs.soundise.com/issues/new/choose"
+  },
+  "repository": {
+    "type": "Github",
+    "url": "https://github.com/soundise/docs.soundise.com"
+  },
+  "keywords": [
+    "Soundise",
+    "Documentation",
+    "React",
+    "Next.js",
+    "Nextra"
+  ],
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,13 +31,14 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@next/font": "13.1.6",
+    "next": "13.1.6",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
     "@types/node": "18.13.0",
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",
-    "next": "13.1.6",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
     "typescript": "4.9.5"
   }
 }
