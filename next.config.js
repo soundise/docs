@@ -9,4 +9,8 @@ const withNextra = nextra({
 export default withNextra({
   reactStrictMode: true,
   trailingSlash: true,
+  i18n: {
+    locales: ['en'],
+    defaultLocale: 'en',
+  },
 });
