@@ -4,19 +4,19 @@ import { ThemeProvider } from 'styled-components';
 import { darkTheme, lightTheme } from '@soundise/react-components';
 
 const App = ({ Component, pageProps }: AppProps) => {
-  const [theme, setTheme] = useState<'light' | 'dark'>('light');
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
     const observer = new MutationObserver((mutations) => {
       mutations.forEach((mutation) => {
         if (mutation.attributeName === 'class') {
-          setTheme(element.classList.contains('dark') ? 'dark' : 'light');
+          setIsDarkMode(element.classList.contains('dark'));
         }
       });
     });
 
     const element = document.documentElement;
-    setTheme(element.classList.contains('dark') ? 'dark' : 'light');
+    setIsDarkMode(element.classList.contains('dark'));
     observer.observe(element, { attributes: true });
 
     return () => {
@@ -25,7 +25,7 @@ const App = ({ Component, pageProps }: AppProps) => {
   }, []);
 
   return (
-    <ThemeProvider theme={theme === 'dark' ? darkTheme : lightTheme}>
+    <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
       <Component {...pageProps} />
     </ThemeProvider>
   );
