@@ -13,4 +13,7 @@ export default withNextra({
     locales: ['en'],
     defaultLocale: 'en',
   },
+  compiler: {
+    styledComponents: true,
+  },
 });

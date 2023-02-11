@@ -1,7 +1,8 @@
 import type { DocsThemeConfig } from 'nextra-theme-docs';
+import { SoundiseLogo } from '@soundise/react-components';
 
 const theme: DocsThemeConfig = {
-  logo: <span>Soundise</span>,
+  logo: <SoundiseLogo width={96} />,
   // i18n: [
   //   { locale: 'en', text: 'English' },
   // ]
