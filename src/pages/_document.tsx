@@ -33,7 +33,34 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head />
+        <Head>
+          <link
+            rel="icon"
+            href="https://assets.soundise.com/web-assets/favicon.svg"
+            key="favicon"
+          />
+          <link
+            rel="icon"
+            href="https://assets.soundise.com/web-assets/favicon.svg"
+            color="#FFFFFF"
+            key="hex favicon"
+          />
+          <link
+            rel="apple-touch-icon"
+            href="https://assets.soundise.com/web-assets/apple-touch-icon-dark.png"
+          />
+
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin="anonymous"
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=JetBrains+Mono:wght@400;700&display=swap"
+            rel="stylesheet"
+          />
+        </Head>
         <body>
           <Main />
           <NextScript />
