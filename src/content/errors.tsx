@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import { styled } from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faUserLock,
@@ -14,6 +15,10 @@ interface IError {
     description: string | ReactNode;
   };
 }
+
+const Link = styled.a`
+  color: ${({ theme }) => theme.colors.primary.pr500};
+`;
 
 export const errors: IError = {
   error401: {
@@ -33,7 +38,7 @@ export const errors: IError = {
     title: 'Seems like you are lost...',
     description: (
       <>
-        Return to the <a href="/">homepage</a>!
+        Return to the <Link href="/">homepage</Link>!
       </>
     ),
   },
