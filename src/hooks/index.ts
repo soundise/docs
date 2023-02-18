@@ -1,1 +1,2 @@
-export { useDarkMode } from './useDarkMode';
+export { useNextraTheme } from './useNextraTheme';
+export { useDarkTheme } from './useDarkTheme';
