@@ -1,5 +1,5 @@
 {
-  "name": "docs.soundise.com",
+  "name": "@soundise/docs",
   "version": "1.0.0",
   "private": true,
   "license": "GPL-3.0-only",
@@ -10,11 +10,11 @@
     "email": "soundise@soundise.com"
   },
   "bugs": {
-    "url": "https://github.com/soundise/docs.soundise.com/issues/new/choose"
+    "url": "https://github.com/soundise/docs/issues/new/choose"
   },
   "repository": {
     "type": "Github",
-    "url": "https://github.com/soundise/docs.soundise.com"
+    "url": "https://github.com/soundise/docs"
   },
   "keywords": [
     "Soundise",

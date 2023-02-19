@@ -8,11 +8,9 @@ export const useDarkTheme = () => {
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
     const setTheme = () => {
-      if (theme === 'system') {
-        setIsDarkTheme(mediaQuery.matches);
-      } else {
-        setIsDarkTheme(theme === 'dark');
-      }
+      setIsDarkTheme(
+        theme === 'system' ? mediaQuery.matches : theme === 'dark'
+      );
     };
 
     setTheme();

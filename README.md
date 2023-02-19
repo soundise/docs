@@ -3,6 +3,6 @@
 </a>
 
 <div align="center">
-  <h1>docs.soundise.com</h1>
+  <h1>docs</h1>
   <b>Soundise documentation</b>
 </div>

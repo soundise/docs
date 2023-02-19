@@ -14,7 +14,7 @@ const theme: DocsThemeConfig = {
   chat: {
     link: 'https://discord.soundise.com',
   },
-  docsRepositoryBase: 'https://github.com/soundise/docs.soundise.com/tree/main',
+  docsRepositoryBase: 'https://github.com/soundise/docs/tree/main',
   primaryHue: 266,
   sidebar: {
     toggleButton: true,
