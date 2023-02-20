@@ -54,7 +54,7 @@ export const errors: IError = {
   },
   fallback: {
     icon: <FontAwesomeIcon icon={faCircleExclamation} />,
-    title: 'Something goes wrong!',
+    title: 'Something went wrong!',
     description:
       "We're so sorry. We're not sure what happened. Please try again later!",
   },
