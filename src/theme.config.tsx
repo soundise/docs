@@ -26,11 +26,16 @@ const theme: DocsThemeConfig = {
   footer: {
     text: (
       <span>
-        Copyright © {new Date().getFullYear()}{' '}
-        <a href="https://soundise.com" target="_blank" rel="noreferrer">
+        © {new Date().getFullYear()}{' '}
+        <a
+          href="https://soundise.com"
+          target="_blank"
+          rel="noreferrer"
+          className="hover:nx-text-gray-800 dark:hover:nx-text-gray-200"
+        >
           Soundise
-        </a>
-        . GPL-3.0 License
+        </a>{' '}
+        - Self-hosted music streaming service
       </span>
     ),
   },
