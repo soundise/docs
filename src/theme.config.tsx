@@ -1,6 +1,6 @@
 import type { DocsThemeConfig } from 'nextra-theme-docs';
-import { SoundiseLogo } from '@soundise/react-components';
 import { useRouter } from 'next/router';
+import { SoundiseLogo } from '@soundise/react-components';
 
 const url = 'https://docs.soundise.com';
 const description =

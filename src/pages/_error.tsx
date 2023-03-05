@@ -1,34 +1,13 @@
 import type { NextPage, NextPageContext } from 'next';
-import Head from 'next/head';
-import { GlobalStyle, darkTheme, lightTheme } from '@soundise/react-components';
-import { useDarkTheme } from 'hooks';
-import { HttpError } from 'components';
-import { errors } from 'content';
+import { ErrorPage } from 'components';
 
 interface IErrorProps {
   statusCode?: number;
 }
 
-const Error: NextPage<IErrorProps> = ({ statusCode }) => {
-  const isDarkTheme = useDarkTheme();
-  const error = errors[`error${statusCode}`] || errors.fallback;
-  const title = `${statusCode} | Soundise`;
-
-  return (
-    <>
-      <Head>
-        <title>{title}</title>
-      </Head>
-      <HttpError
-        icon={error.icon}
-        title={error.title}
-        description={error.description}
-      >
-        <GlobalStyle theme={isDarkTheme ? darkTheme : lightTheme} />
-      </HttpError>
-    </>
-  );
-};
+const Error: NextPage<IErrorProps> = ({ statusCode }) => (
+  <ErrorPage statusCode={statusCode || 404} />
+);
 
 Error.getInitialProps = ({ res, err }: NextPageContext) => {
   const statusCode = res ? res.statusCode : err ? err.statusCode : 404;
