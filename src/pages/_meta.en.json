@@ -1,15 +1,9 @@
 {
   "index": "Introduction",
-  "about": {
-    "title": "About",
+  "home": {
+    "title": "Home",
     "type": "page",
     "href": "https://soundise.com",
-    "newWindow": true
-  },
-  "demo": {
-    "title": "Demo",
-    "type": "page",
-    "href": "https://demo.soundise.com",
     "newWindow": true
   },
   "storybook": {
