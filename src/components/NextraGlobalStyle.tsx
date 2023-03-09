@@ -1,6 +1,48 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const NextraGlobalStyle = createGlobalStyle`
+  *,
+  *::before,
+  *::after {
+    font-family: ${({ theme }) => theme.typography.fonts.primary}, ${({
+  theme,
+}) => theme.typography.fonts.fallback} !important;
+    line-height: 1.5 !important;
+    overflow-wrap: break-word !important;
+    hyphens: auto !important;
+    text-size-adjust: 100% !important;
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    accent-color: ${({ theme }) => theme.colors.brand.tertiary} !important;
+    scroll-behavior: smooth !important;
+     
+    @media (prefers-reduced-motion: reduce) {
+      scroll-behavior: auto !important;
+    }
+  }
+
+  *::selection {
+    color: ${({ theme }) => theme.colors.neutral.white} !important;
+    background-color: ${({ theme }) => theme.colors.brand.tertiary} !important;
+  }
+  
+  button:focus-visible, a:focus-visible, input[type='search']:focus-visible, input[type='checkbox']:focus-visible, input[type='radio']:focus-visible, input[type='range']:focus-visible {
+    outline-width: 2px !important;
+    outline-color: ${({ theme }) => theme.colors.brand.tertiary} !important;
+    box-shadow: none !important;
+  }
+
+  img, picture, video, canvas, svg, iframe {
+    user-select: none !important;
+  }
+
+  pre, code {
+    font-family: ${({ theme }) => theme.typography.fonts.code.primary}, ${({
+  theme,
+}) => theme.typography.fonts.code.fallback} !important;
+  }
+
   html[style="color-scheme: light;"] {
     body {
       background: ${({ theme }) => theme.colors.neutral.white} !important;
