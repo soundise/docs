@@ -108,13 +108,13 @@ export const NextraGlobalStyle = createGlobalStyle`
 
   @supports ((-webkit-backdrop-filter:blur(1px)) or ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px)))) {
     .nextra-nav-container-blur {
-      background: rgba(255,255,255,.5) !important;
-      backdrop-filter: saturate(180%) blur(5px) !important;
+      background: ${({ theme }) => theme.colors.neutral.white} !important;
+      backdrop-filter: none !important;
     }
 
     html[class~=dark] .nextra-nav-container-blur {
-      background: rgba(0,0,0,.5) !important;
-      backdrop-filter: saturate(180%) blur(5px) !important;
+      background: ${({ theme }) => theme.colors.neutral.black} !important;
+      backdrop-filter: none !important;
     }
   }
 
