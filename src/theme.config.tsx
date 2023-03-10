@@ -1,6 +1,11 @@
 import type { DocsThemeConfig } from 'nextra-theme-docs';
 import { useRouter } from 'next/router';
-import { SoundiseLogo } from '@soundise/react-components';
+import {
+  SoundiseLogo,
+  darkTheme,
+  lightTheme,
+} from '@soundise/react-components';
+import { useNextraTheme, useDarkTheme } from 'hooks';
 
 const url = 'https://docs.soundise.com';
 const description =
@@ -62,6 +67,8 @@ const theme: DocsThemeConfig = {
   },
   head: () => {
     const { locale } = useRouter();
+    const isNextraThemeDark = useNextraTheme();
+    const isDarkTheme = useDarkTheme();
 
     return (
       <>
@@ -83,13 +90,11 @@ const theme: DocsThemeConfig = {
 
         <meta
           name="theme-color"
-          content="#FFFFFF"
-          media="(prefers-color-scheme: light)"
-        />
-        <meta
-          name="theme-color"
-          content="#000000"
-          media="(prefers-color-scheme: dark)"
+          content={
+            isNextraThemeDark || isDarkTheme
+              ? darkTheme.colors.background
+              : lightTheme.colors.background
+          }
         />
 
         <meta

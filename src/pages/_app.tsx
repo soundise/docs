@@ -3,6 +3,7 @@ import { ThemeProvider } from 'styled-components';
 import { darkTheme, lightTheme } from '@soundise/react-components';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import { useNextraTheme } from 'hooks';
+import { NextraGlobalStyle } from 'components';
 
 import '@fortawesome/fontawesome-svg-core/styles.css';
 
@@ -13,6 +14,7 @@ const App = ({ Component, pageProps }: AppProps) => {
 
   return (
     <ThemeProvider theme={isNextraThemeDark ? darkTheme : lightTheme}>
+      <NextraGlobalStyle />
       <Component {...pageProps} />
     </ThemeProvider>
   );
